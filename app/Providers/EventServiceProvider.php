@@ -21,16 +21,13 @@ class EventServiceProvider extends ServiceProvider
             SendEmailVerificationNotification::class,
         ],
     ];
-    protected $observers = [
-    Travel::class => [TravelObserver::class]
-    ];
-
+    
     /**
      * Register any events for your application.
      */
     public function boot(): void
     {
-        Travel::observe(TravelObserver::class);
+        //
     }
 
     /**
